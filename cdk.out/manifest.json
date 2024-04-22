@@ -1,0 +1,360 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "AwsCdkYoloStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "AwsCdkYoloStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "AwsCdkYoloStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "AwsCdkYoloStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/2b74799a43841d5bddd97a3dccb50b90247cd2e70f8bffabcff79a9b05b60ac1.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "AwsCdkYoloStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "AwsCdkYoloStack.assets"
+      ],
+      "metadata": {
+        "/AwsCdkYoloStack/AdminRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AdminRole38563C57"
+          }
+        ],
+        "/AwsCdkYoloStack/opencv_lambda_layer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "opencvlambdalayerFD508266"
+          }
+        ],
+        "/AwsCdkYoloStack/image_edit_cv2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "imageeditcv2F13735B6"
+          }
+        ],
+        "/AwsCdkYoloStack/generate_presigned_download/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "generatepresigneddownloadF3E1EC45"
+          }
+        ],
+        "/AwsCdkYoloStack/generate_presigned_upload/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "generatepresignedupload49E49D22"
+          }
+        ],
+        "/AwsCdkYoloStack/yolo_dockerFunc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "yolodockerFuncC093D641"
+          }
+        ],
+        "/AwsCdkYoloStack/yolo_dockerFunc/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "yolodockerFuncFunctionUrlE51B6973"
+          }
+        ],
+        "/AwsCdkYoloStack/yolo_dockerFunc/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "yolodockerFuncinvokefunctionurlBFDF77B8"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapi049FED97"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiDeployment586D3C36cbd51736ef12f4bda10be2789ee65e86"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiDeploymentStageprod6F3D50EE"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiEndpointD88CD606"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiOPTIONS110DB9EE"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/image_edit_cv2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiimageeditcv2D6481BC0"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/image_edit_cv2/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiimageeditcv2OPTIONS9936506B"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/image_edit_cv2/POST/ApiPermission.AwsCdkYoloStackapplicationapiA4C02AA2.POST..image_edit_cv2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiimageeditcv2POSTApiPermissionAwsCdkYoloStackapplicationapiA4C02AA2POSTimageeditcv224D5EF3D"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/image_edit_cv2/POST/ApiPermission.Test.AwsCdkYoloStackapplicationapiA4C02AA2.POST..image_edit_cv2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiimageeditcv2POSTApiPermissionTestAwsCdkYoloStackapplicationapiA4C02AA2POSTimageeditcv2E1013BF5"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/image_edit_cv2/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapiimageeditcv2POST8346EAD7"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_download/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneddownload8D1536A9"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_download/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneddownloadOPTIONS4A243EEA"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_download/GET/ApiPermission.AwsCdkYoloStackapplicationapiA4C02AA2.GET..generate_presigned_download": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneddownloadGETApiPermissionAwsCdkYoloStackapplicationapiA4C02AA2GETgeneratepresigneddownload22BF7CF7"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_download/GET/ApiPermission.Test.AwsCdkYoloStackapplicationapiA4C02AA2.GET..generate_presigned_download": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneddownloadGETApiPermissionTestAwsCdkYoloStackapplicationapiA4C02AA2GETgeneratepresigneddownload5FDC1102"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_download/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneddownloadGET32247337"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_upload/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresignedupload13FEA1B2"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_upload/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneduploadOPTIONS63B02331"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_upload/GET/ApiPermission.AwsCdkYoloStackapplicationapiA4C02AA2.GET..generate_presigned_upload": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneduploadGETApiPermissionAwsCdkYoloStackapplicationapiA4C02AA2GETgeneratepresigneduploadB7BB00D0"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_upload/GET/ApiPermission.Test.AwsCdkYoloStackapplicationapiA4C02AA2.GET..generate_presigned_upload": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneduploadGETApiPermissionTestAwsCdkYoloStackapplicationapiA4C02AA2GETgeneratepresigneduploadD0BE5A8F"
+          }
+        ],
+        "/AwsCdkYoloStack/application-api/Default/generate_presigned_upload/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "applicationapigeneratepresigneduploadGET72D0DEAB"
+          }
+        ],
+        "/AwsCdkYoloStack/ApiUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiUrl"
+          }
+        ],
+        "/AwsCdkYoloStack/yolo_dockerFunc_function_url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "yolodockerFuncfunctionurl"
+          }
+        ],
+        "/AwsCdkYoloStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/AwsCdkYoloStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/AwsCdkYoloStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "AwsCdkYoloStack"
+    },
+    "AwsCdkUiStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "AwsCdkUiStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "AwsCdkUiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "AwsCdkUiStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-us-east-1/075873bbac00ac8078edf18e8db99d20ea5a6be05fdc74703201f5ee87b25dcb.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "AwsCdkUiStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "AwsCdkYoloStack",
+        "AwsCdkUiStack.assets"
+      ],
+      "metadata": {
+        "/AwsCdkUiStack/admin_role_ui/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "adminroleuiA02EDD75"
+          }
+        ],
+        "/AwsCdkUiStack/DataBucketTextract/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DataBucketTextractD01D9B32"
+          }
+        ],
+        "/AwsCdkUiStack/DataBucketTextract/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DataBucketTextractPolicy416E0828"
+          }
+        ],
+        "/AwsCdkUiStack/DeployFiles/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeployFilesAwsCliLayerF562E16D"
+          }
+        ],
+        "/AwsCdkUiStack/DeployFiles/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeployFilesCustomResource51EC1601"
+          }
+        ],
+        "/AwsCdkUiStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/AwsCdkUiStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/AwsCdkUiStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/AwsCdkUiStack/MyOAI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyOAID7163411"
+          }
+        ],
+        "/AwsCdkUiStack/MyDistribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyDistribution6271DFB5"
+          }
+        ],
+        "/AwsCdkUiStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/AwsCdkUiStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/AwsCdkUiStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "AwsCdkUiStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

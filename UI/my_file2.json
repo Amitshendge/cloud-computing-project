@@ -1,0 +1,4 @@
+{
+    "REACT_APP_api_base_url" : "https://246c01nc5b.execute-api.us-east-1.amazonaws.com/prod",
+    "REACT_APP_func_url_yolo" : "https://plh3coaashdxq7g57atgfttcru0fmjfp.lambda-url.us-east-1.on.aws/"
+}
